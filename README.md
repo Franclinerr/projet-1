@@ -1,38 +1,28 @@
-# projet-1
+# Morpion Mobile - React Native + Expo
 
-# 🎮 Jeu du Morpion (Tic-Tac-Toe)
+Projet académique L2 Génie Logiciel. Jeu de morpion 3x3 full mobile.
 
-Un jeu de morpion simple et interactif développé en HTML, CSS et JavaScript. 
-Le jeu permet à deux joueurs de s'affronter ou de jouer contre l'ordinateur.
+## 📱 Stack Technique
+- **React Native / Expo** : Pour le mobile
+- **React Hooks** : `useState` pour l'état du jeu, `useEffect` pour détecter la fin
+- **JSX & StyleSheet** : Interface 100% React Native (pas de HTML)
 
-### ✨ Fonctionnalités
-- Mode 2 joueurs (X vs O)
-- Détection automatique du gagnant
-- Gestion des matchs nuls
-- Bouton Recommencer la partie
-- Interface responsive (marche sur téléphone et PC)
-- Animations simples et design épuré
+## 🧠 Logique du jeu (ce que ton prof veut entendre)
+1. **Etat:** `const [board, setBoard] = useState(Array(9).fill(null))`
+2. **Tour par tour:** `const [xIsNext, setXIsNext] = useState(true)` -> on alterne X et O
+3. **Coup:** Quand on clique sur une case, on copie la grille `[...board]` on met X ou O, puis `setBoard`
+4. **Victoire:** On a un tableau des 8 combinaisons gagnantes `[[0,1,2], [3,4,5]...]` et on boucle pour voir si `board[a] === board[b] === board[c]`
+5. **Fin de partie:** Si victoire ou si `board` est plein sans victoire = Match nul
 
-### 🛠️ Technologies utilisées
-- **HTML5** - Structure du jeu
-- **CSS3** - Style et animations
-- **JavaScript** - Logique du jeu
+## ✨ Features
+- Blocage des cases déjà jouées
+- Détection instantanée du gagnant
+- Bouton "Recommencer" qui reset tout avec `setBoard(Array(9).fill(null))`
+- Design responsive avec Flexbox
 
-### 🚀 Installation et lancement
-1. Clone le projet :
+## ▶️ Lancer le projet
 ```bash
-git clone https://github.com/ton-pseudo/morpion.git
-
-
-X | O | X
-
-O | X | O
-
-O | X | X  -> X gagne
-
-
-/morpion
-  ├── index.html
-  ├── style.css
-  ├── script.js
-  └── README.md
+git clone https://github.com/Franclinerr/projet-1.git
+cd projet-1
+npm install
+npx expo start
