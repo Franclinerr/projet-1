@@ -22,7 +22,7 @@ Projet académique L2 Génie Logiciel. Jeu de morpion 3x3 full mobile.
 
 ## ▶️ Lancer le projet
 ```bash
-git clone https://github.com/Franclinerr/projet-1.git
+git clone https://github.com/Franclinerr/morpion-game
 cd projet-1
 npm install
 npx expo start
