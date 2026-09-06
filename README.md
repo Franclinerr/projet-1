@@ -9,9 +9,9 @@
 
 ### 📱 Live Preview
 <p align="center">
-  <img src="./screenshot.png" alt="Game Screenshot" width="300"/>
+  <img src="./IMG_6003.png" alt="Game IMG_6003 " width="300"/>
   <br/>
-  <em>Add your screenshot here - just drag your phone screenshot into the repo</em>
+  <em>Add your  IMG_6003 here - just drag your phone screenshot into the repo</em>
 </p>
 
 ### 🚀 About The Project
