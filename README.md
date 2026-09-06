@@ -1,28 +1,37 @@
-# Morpion Mobile - React Native + Expo
+# 🎮 Morpion Mobile - React Native + Expo
 
-Projet académique L2 Génie Logiciel. Jeu de morpion 3x3 full mobile.
+> A clean, performant, and fully responsive Tic-Tac-Toe game built for mobile.
+> Academic Project - L2 Software Engineering | Douala, Cameroon.
 
-## 📱 Stack Technique
-- **React Native / Expo** : Pour le mobile
-- **React Hooks** : `useState` pour l'état du jeu, `useEffect` pour détecter la fin
-- **JSX & StyleSheet** : Interface 100% React Native (pas de HTML)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-## 🧠 Logique du jeu (ce que ton prof veut entendre)
-1. **Etat:** `const [board, setBoard] = useState(Array(9).fill(null))`
-2. **Tour par tour:** `const [xIsNext, setXIsNext] = useState(true)` -> on alterne X et O
-3. **Coup:** Quand on clique sur une case, on copie la grille `[...board]` on met X ou O, puis `setBoard`
-4. **Victoire:** On a un tableau des 8 combinaisons gagnantes `[[0,1,2], [3,4,5]...]` et on boucle pour voir si `board[a] === board[b] === board[c]`
-5. **Fin de partie:** Si victoire ou si `board` est plein sans victoire = Match nul
+### 📱 Live Preview
+<p align="center">
+  <img src="./screenshot.png" alt="Game Screenshot" width="300"/>
+  <br/>
+  <em>Add your screenshot here - just drag your phone screenshot into the repo</em>
+</p>
 
-## ✨ Features
-- Blocage des cases déjà jouées
-- Détection instantanée du gagnant
-- Bouton "Recommencer" qui reset tout avec `setBoard(Array(9).fill(null))`
-- Design responsive avec Flexbox
+### 🚀 About The Project
+This is not just a game. It's a demonstration of core React Native concepts: state management, component reusability, and declarative UI logic.
+The goal was to build a 3x3 Tic-Tac-Toe without any HTML, 100% native mobile components.
 
-## ▶️ Lancer le projet
-```bash
-git clone https://github.com/Franclinerr/morpion-game
-cd projet-1
-npm install
-npx expo start
+### 📱 Tech Stack & Why
+
+| Technology | Usage |
+| --- | --- |
+| **React Native / Expo** | Cross-platform mobile framework. One codebase for Android & iOS. |
+| **React Hooks** | `useState` to manage board state, player turn, and winner. `useEffect` to watch for game-end. |
+| **JSX & StyleSheet API** | Native styling, no CSS/HTML. Using Flexbox for perfect responsiveness. |
+| **Expo Go** | For instant testing on a real device without building an APK. |
+
+### 🧠 Core Game Logic Explained
+
+This is the part your teacher will ask about:
+
+**1. The State:**
+```javascript
+const [board, setBoard] = useState(Array(9).fill(null)); // 9 empty cells
+const [xIsNext, setXIsNext] = useState(true); // X starts
